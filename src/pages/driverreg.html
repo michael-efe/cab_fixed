@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Registration Page</title>
+    <link rel="icon" href="../assets/images/download.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../index.css">
+<style>
+    body {
+        background-color: #F6F6F6;
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: auto;
+    }
+    .form-signin .form-floating:focus-within {
+        z-index: 2;
+    }
+    .form-signin input,
+    .form-signin select,
+    .form-signin textarea {
+        margin-bottom: 10px;
+    }
+</style>
+
+</head>
+<body>
+
+<main class="form-signin">
+    <a href="driverhub.html" class="h6 mb-3 fw-normal" style="text-decoration: none;">Back to Driver's Hub</a>
+    <form id="driverRegForm" action="" method="">
+        <img class="mb-4" src="../assets/images/uniben.jpeg" alt="UNIBEN Logo" width="60" height="60">
+        <h1 class="h3 mb-3 fw-bold">UNIBEN Mobility</h1>
+        <h2 class="h4 mb-2 fw-normal">Become a Driver</h2>
+
+    <div class="form-floating">
+        <input type="text" id="driverFullName" name="fullname" class="form-control" placeholder="John Doe" required>
+        <label for="driverFullName">Full Name</label>
+    </div>
+    <div class="form-floating">
+        <input type="email" id="driverEmail" name="email" class="form-control" placeholder="name@example.com" required>
+        <label for="driverEmail">Email address</label>
+    </div>
+    <div class="form-floating">
+        <input type="number" id="driverID" name="id" class="form-control" placeholder="9999" required>
+        <label for="driverID">ID Number</label>
+    </div>
+    <div class="form-floating">
+        <select id="vehicleType" name="type" class="form-control" required>
+            <option selected disabled value="">Type of Vehicle</option>
+            <option value="Cab">Cab</option>
+            <option value="Shuttle">Shuttle</option>
+        </select>
+        <label for="vehicleType">Vehicle</label>
+    </div>
+    <div class="form-floating">
+        <input type="file" id="vehicleImage" name="image" class="form-control" required>
+        <label for="vehicleImage">Vehicle Image</label>
+    </div>
+    <div class="form-floating">
+        <textarea id="vehicleDescription" name="description" class="form-control" placeholder="Vehicle Description" required></textarea>
+        <label for="vehicleDescription">Vehicle Description</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" id="driverPassword" name="password" class="form-control" placeholder="Password" required>
+        <label for="driverPassword">Password</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" id="driverConfirmPassword" name="confirm" class="form-control" placeholder="Confirm Password" required>
+        <label for="driverConfirmPassword">Confirm Password</label>
+    </div>
+
+    <button id="driverRegBtn" class="w-100 btn btn-lg btn-purple" type="submit">Register</button>
+    <p>If you have an account <a href="driverlogin.html" style="color: #8C1C64;">Login Here</a></p>
+    <p class="text-center mt-5 mb-3">
+        <a href="mailto:emmexanimation@gmail.com" class="text-muted" style="text-decoration: none;">emmexanimation@gmail.com</a><br>
+        <a href="https://efemichael-712.web.app" class="text-muted" style="text-decoration: none;">By Michael Efe © 2025</a>
+    </p>
+</form>
+
+</main>
+
+<script>
+    const driverRegForm = document.getElementById('driverRegForm');
+    driverRegForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const fullname = document.getElementById('driverFullName').value;
+        const email = document.getElementById('driverEmail').value;
+        const id = document.getElementById('driverID').value;
+        const type = document.getElementById('vehicleType').value;
+        const image = document.getElementById('vehicleImage').files[0];
+        const description = document.getElementById('vehicleDescription').value;
+        const password = document.getElementById('driverPassword').value;
+        const confirmPassword = document.getElementById('driverConfirmPassword').value;
+
+        if(password !== confirmPassword){
+            alert('Passwords do not match!');
+            return;
+        }
+
+        console.log({ fullname, email, id, type, image, description, password });
+
+        // Placeholder: Integrate with backend registration logic
+        alert(`Driver registered:\nName: ${fullname}\nEmail: ${email}`);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+</body>
+</html>

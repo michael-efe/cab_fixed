@@ -1,0 +1,88 @@
+body {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+margin: 0;
+padding: 0;
+font-size: 16px; /* default readable size */
+font-weight: 400;
+width: 100%;
+height: 100%;
+cursor: default;
+line-height: 1.5;
+box-sizing: border-box;
+}
+
+/* Purple Background Utility */
+.bg-purple {
+background: linear-gradient(135deg, #8C1C64 0%, #B3257F 100%, #5A1041 100%);
+color: #F6F6F6;
+}
+
+/* Purple Button */
+.btn-purple {
+background: linear-gradient(135deg, #8C1C64 0%, #B3257F 100%, #5A1041 100%);
+color: #F6F6F6;
+border: none;
+border-radius: 8px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+.btn-purple:hover,
+.btn-purple:focus {
+background: linear-gradient(135deg, #8C1C64 0%, #B3257F 100%, #5A1041 100%);
+color: #F6F6F6;
+transform: translateY(-2px);
+outline: none;
+}
+
+/* Yellow Background Utility */
+.bg-yellow {
+background: linear-gradient(135deg, #FFC93C 0%, #FFE27A 100%);
+color: #1C1C1C;
+}
+
+/* Yellow Button */
+.btn-yellow {
+background: linear-gradient(135deg, #FFC93C 0%, #FFE27A 100%);
+color: #1C1C1C;
+border: none;
+border-radius: 8px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+.btn-yellow:hover,
+.btn-yellow:focus {
+background: linear-gradient(135deg, #FFC93C 0%, #FFE27A 100%);
+color: #1C1C1C;
+transform: translateY(-2px);
+outline: none;
+}
+
+/* Navigation links */
+.nav-link {
+margin: 0 10px;
+font-weight: 500;
+text-decoration: none;
+}
+.nav-link:hover,
+.nav-link:focus {
+color: #FFC93C !important;
+text-decoration: none;
+}
+
+/* Footer styling */
+footer {
+padding: 3%;
+width: 100%;
+text-align: center;
+}
+
+/* Card or image hover effect */
+.front:hover {
+transform: translateY(-2px);
+transition: transform 0.3s ease;
+}
+
+/* Ensure inputs, selects, textarea have consistent box sizing */
+input, select, textarea, button {
+box-sizing: border-box;
+}
