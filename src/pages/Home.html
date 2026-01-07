@@ -19,7 +19,8 @@
 
         /* Hero Section Background */
         section.hero {
-            background-image: url("../assets/images/map2.png");
+            background-image: linear-gradient(rgba(167, 167, 167, 0.6)), url("../assets/images/front.jpg");
+            /* opacity: ; */
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -56,7 +57,7 @@
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-purple">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="Home.html">
             <b>UNIBEN Mobility</b>
         </a>
 
@@ -81,19 +82,22 @@
 <!-- ================= HERO SECTION ================= -->
 <section class="hero">
     <h1 class="h1 mb-3 fw-bold" style="color:#8C1C64;">UNIBEN Mobility Suite</h1>
-    <p class="h5 fw-normal">Safe, reliable and affordable transportation for</p>
-    <p class="h5 fw-normal">UNIBEN students</p>
+    <div class="intro" style="margin-bottom: 15%; border-radius: 5px; padding: 5px;">
+    <p class="h5 fw-bold" style="padding-left: 20px; padding-right: 20px;" >Safe, reliable and affordable</p>
+    <p class="h5 fw-bold" style="padding-left: 60px; padding-right: 60px;" >transportation for</p>
+    <p class="h5 fw-bold" style="padding-left: 60px; padding-right: 60px;" >UNIBEN students</p>
+    </div>
 
-    <div class="buttons mt-3">
+    <div class="buttons" style="margin-top: -5%;">
         <a id="bookRideBtn" href="BookRide.html" class="btn btn-purple me-2">Book Ride</a>
         <a href="Login.html" class="btn btn-yellow">Student Login</a>
     </div>
 </section>
-
+<br><br><br>
 <!-- ================= WHY CHOOSE US ================= -->
 <center class="h3 fw-bold mt-4">Why Choose UNIBEN Mobility?</center>
 
-<div class="container d-flex flex-column flex-md-row gap-3 mt-4">
+<div class="container d-flex flex-column flex-md-row gap-3 mt-4" style="padding: 5%;">
     <div class="info-card">
         <h3 class="h5 fw-bold">Safe & Secure</h3>
         <p class="text-muted">Verified Drivers and real-time tracking</p>
@@ -134,16 +138,16 @@
         <h3 class="h4 fw-bold">Campus Shuttles</h3>
         <p>Shuttle services with real-time tracking:</p>
         <ul>
-            <li>Main Gate ↔ Back Gate — <b>#200</b></li>
-            <li>Small Gate → New Benin — <b>#300</b></li>
-            <li>Small Gate → Ring Road — <b>#300</b></li>
-            <li>Main Gate ↔ Back Gate — <b>#200</b></li>
+            <li>Main Gate ↔ Back Gate — <b>₦200</b></li>
+            <li>Small Gate → New Benin — <b>₦300</b></li>
+            <li>Small Gate → Ring Road — <b>₦300</b></li>
+            <li>Main Gate ↔ Back Gate — <b>₦200</b></li>
         </ul>
         <a href="BookRide.html" class="btn btn-purple">Book Shuttle</a>
     </div>
 
 </div>
-
+<br><br><br>
 <!-- ================= FOOTER ================= -->
 <footer class="bg-purple text-white d-flex flex-column flex-md-row gap-5 mt-4">
     <div>
